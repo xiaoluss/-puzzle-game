@@ -12,7 +12,7 @@ def create_app():
     os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance'), exist_ok=True)
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-    CORS(app)
+    CORS(app, origins=[app.config['FRONTEND_URL'], r'^https?://.*\.vercel\.app$'])
     db.init_app(app)
     JWTManager(app)
 
@@ -50,6 +50,7 @@ def create_app():
 
     return app
 
+app = create_app()
+
 if __name__ == '__main__':
-    app = create_app()
     app.run(debug=True, host='0.0.0.0', port=5000)
