@@ -1,0 +1,69 @@
+{
+  "chapter": {
+    "title": "第一章：消失的宝藏"
+  },
+  "scenes": [
+    {
+      "scene_type": "dialog",
+      "character_name": "侦探",
+      "lines": [
+        "你好，{playerName}。终于等到你了。",
+        "最近博物馆发生了一起离奇的盗窃案。",
+        "镇馆之宝——'星空之眼'宝石，在严密的安保下消失了。",
+        "我需要你的帮助来解开这个谜团。"
+      ]
+    },
+    {
+      "scene_type": "dialog",
+      "character_name": "助手",
+      "lines": [
+        "{playerName}，你来了！",
+        "我们在现场发现了一些奇怪的线索。",
+        "看起来这个案子并不简单。"
+      ]
+    },
+    {
+      "scene_type": "narrative",
+      "text": "你走进博物馆大厅，四周一片寂静。月光透过玻璃穹顶洒落在大理石地面上。\n\n在原本陈列宝石的展柜前，你发现了一串神秘的数字刻在地板上：\n\n3 6 9 12 15 ?"
+    },
+    {
+      "scene_type": "puzzle_text",
+      "question": "地板上的数列 '3, 6, 9, 12, 15, ?' 中，问号处应该是数字几？",
+      "answer": "18",
+      "accepted_answers": ["十八"],
+      "hints": [
+        "观察数字之间的差值",
+        "每次增加多少？"
+      ],
+      "fail_limit": 3
+    },
+    {
+      "scene_type": "dialog",
+      "character_name": "侦探",
+      "lines": [
+        "干得好！你解开了第一个谜题。",
+        "我注意到那个数字指向了大厅里的那幅画。"
+      ]
+    },
+    {
+      "scene_type": "narrative",
+      "text": "你走向那幅巨大的油画，发现画中隐藏着一个小小的密室开关。\n\n你按下开关，墙壁缓缓打开，露出了一条秘密通道..."
+    },
+    {
+      "scene_type": "puzzle_choice",
+      "question": "面对漆黑的密道，你选择用什么照明？",
+      "answer": "0",
+      "choices": ["手机手电筒", "打火机", "蜡烛", "夜视仪"],
+      "hints": ["在古墓中，明火可能会耗尽氧气"],
+      "fail_limit": 2
+    },
+    {
+      "scene_type": "dialog",
+      "character_name": "助手",
+      "lines": [
+        "好险！还好你带了手电筒。",
+        "前面好像有什么东西在发光！"
+      ]
+    }
+  ]
+}
